@@ -29,7 +29,7 @@ class CookieBanner
         if (($cookie = self::getCookie()) === null) {
             return false;
         }
-        return str_contains($featureName, $cookie);
+        return str_contains($cookie, $featureName);
     }
 
     public static function allowedFeatures(): array
